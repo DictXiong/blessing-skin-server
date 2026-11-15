@@ -18,6 +18,7 @@ on:
 
 jobs:
   notification:
+    if: github.repository == 'bs-community/blessing-skin-server'
     name: Send Message
     runs-on: ubuntu-latest
     steps:

@@ -1,0 +1,46 @@
+# This file was generated entirely by AI.
+# It has not been reviewed line by line by a human.
+name: PHP 8.3 compatibility
+
+on:
+  push:
+    branches: [codex/php83-compat]
+  pull_request:
+    branches: [codex/php83-compat]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3.36'
+          coverage: none
+          extensions: mbstring, dom, fileinfo, gd, imagick, pdo_sqlite, zip
+          tools: composer:2
+      - name: Restore fixed frontend test inputs
+        run: |
+          curl -fL https://github.com/bs-community/blessing-skin-server/releases/download/6.0.2/blessing-skin-server-6.0.2.zip -o "$RUNNER_TEMP/blessing-skin-6.0.2.zip"
+          python3 tools/build-php83.py --frontend-archive "$RUNNER_TEMP/blessing-skin-6.0.2.zip" --prepare-assets-only
+      - name: Install and check dependencies
+        run: |
+          composer install --no-plugins --no-scripts --prefer-dist --no-interaction
+          composer validate --strict --no-check-publish
+          composer check-platform-reqs
+          composer audit --locked
+      - name: Prepare isolated test state
+        env:
+          APP_ENV: testing
+        run: |
+          mkdir -p storage/framework/cache/data storage/framework/sessions storage/framework/views storage/logs storage/textures resources/views/overrides
+          php artisan package:discover
+          php artisan passport:keys --length=2048
+      - name: Run full regression suite
+        run: php vendor/bin/phpunit
+      - name: Build and check production distribution
+        run: python3 tools/build-php83.py --frontend-archive "$RUNNER_TEMP/blessing-skin-6.0.2.zip"

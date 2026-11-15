@@ -27,3 +27,8 @@ storage/options.php
 resources/views/overrides
 public/sw.js
 public/meta.js
+
+# Local compatibility build outputs and raw evidence
+/dist/
+/build/
+evidence/

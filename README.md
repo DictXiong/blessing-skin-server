@@ -1,3 +1,5 @@
+**PHP 8.3.36 compatibility fork:** see [scope, validation and build instructions](README-PHP83.md). This is an unofficial compatibility prerelease.
+
 - [简体中文](./README-zh.md)
 - **English**
 
