@@ -25,7 +25,8 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        Passport::routes();
+        $this->loadMigrationsFrom(base_path('vendor/laravel/passport/database/migrations'));
+
 
         $defaultScopes = [
             'User.Read' => 'auth.oauth.scope.user.read',

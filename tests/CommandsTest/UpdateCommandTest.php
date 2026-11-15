@@ -6,6 +6,7 @@ use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Event;
+use Mockery;
 
 class UpdateCommandTest extends TestCase
 {
@@ -20,7 +21,9 @@ class UpdateCommandTest extends TestCase
                 ->once()
                 ->andReturn(true);
         });
-        Cache::partialMock()->shouldReceive('flush')->once();
+        $cache = Mockery::mock(Cache::getFacadeRoot());
+        $cache->shouldReceive('flush')->once();
+        Cache::swap($cache);
         option(['version' => '0.0.0']);
         config([
             'app.version' => '0.0.1',

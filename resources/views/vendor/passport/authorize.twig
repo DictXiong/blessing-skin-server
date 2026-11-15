@@ -23,6 +23,7 @@
 	<div class="d-flex justify-content-between">
 		<form method="post" action="{{ route('passport.authorizations.approve', {}, false) }}">
 			{{ csrf_field() }}
+			<input type="hidden" name="auth_token" value="{{ authToken }}">
 			<input type="hidden" name="state" value="{{ request.state }}">
 			<input type="hidden" name="client_id" value="{{ client.id }}">
 			<button type="submit" class="btn btn-success btn-block pl-5 pr-5">
@@ -32,6 +33,7 @@
 
 		<form method="post" action="{{ route('passport.authorizations.deny', {}, false) }}">
 			{{ csrf_field() }}
+			<input type="hidden" name="auth_token" value="{{ authToken }}">
 			{{ method_field('DELETE') }}
 			<input type="hidden" name="state" value="{{ request.state }}">
 			<input type="hidden" name="client_id" value="{{ client.id }}">

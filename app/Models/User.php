@@ -3,12 +3,12 @@
 namespace App\Models;
 
 use App\Models\Concerns\HasPassword;
+use App\Models\Concerns\SearchString;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
-use Lorisleiva\LaravelSearchString\Concerns\SearchString;
 
 /**
  * @property int         $uid

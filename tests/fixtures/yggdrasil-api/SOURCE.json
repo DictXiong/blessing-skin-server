@@ -1,0 +1,120 @@
+{
+  "repository": "https://github.com/bs-community/blessing-skin-plugins",
+  "commit": "de016f4cbb43df7bd6d46193d5625693f8c79b3f",
+  "plugin": "yggdrasil-api",
+  "version": "5.2.1",
+  "files": [
+    {
+      "path": "bootstrap.php",
+      "sha256": "98a0b1e98a1cedae27bfa9a8c13194f942afc9df9d656ea89418a43ae2bca4db"
+    },
+    {
+      "path": "callbacks.php",
+      "sha256": "cfd6d31191c59dd3a20e34b9a8b8b4a40788a9afb5cae310d29a644e0b353ed3"
+    },
+    {
+      "path": "lang/en/config.yml",
+      "sha256": "f4a9144c2c6068ce52ed3bfa742aca4daab00bde9930c0b247e50bb406c8b5f7"
+    },
+    {
+      "path": "lang/en/dnd.yml",
+      "sha256": "399fbcdb54354aa682d5371aa2eaee7819341fa9c76b211be3f57f39b9a6f6e7"
+    },
+    {
+      "path": "lang/en/exceptions.yml",
+      "sha256": "51306641fee9f18a811a51737a0ef61bf9ffa97c9fe2703a82ac5a9888345c9e"
+    },
+    {
+      "path": "lang/en/front-end.yml",
+      "sha256": "59d5b7957b0ecaac074b65a92dab0039400f712c18038088ccebe673c8a1bfb0"
+    },
+    {
+      "path": "lang/en/log.yml",
+      "sha256": "1904656026180d78ddd4eaa818842b114cea8548c2be418838c1e3df6591df02"
+    },
+    {
+      "path": "lang/en/middleware.yml",
+      "sha256": "6c85ded2b919d7303248159209edf4208c305303c60ca22e8b62f46209ef47bc"
+    },
+    {
+      "path": "package.json",
+      "sha256": "b1c7972fb65e6b35c08230bed0b73b2f52dbca5f4ce0e1a9537ddc7d1119a709"
+    },
+    {
+      "path": "routes.php",
+      "sha256": "65da731ceb612a5140efb2266744d8134e401bce009176bdd95340a1a6635cfc"
+    },
+    {
+      "path": "src/Controllers/AuthController.php",
+      "sha256": "9591cbdac2e92e38db726d55987c26f0627dd1da44077b530603c42d81e7df99"
+    },
+    {
+      "path": "src/Controllers/ConfigController.php",
+      "sha256": "6a5a0256d2337f66724a996737c5d608358e92241e55c24ceacfe28d3b83e251"
+    },
+    {
+      "path": "src/Controllers/ProfileController.php",
+      "sha256": "1c60d99bfd8a7f5bb5b70e20b68861f7220f2e5133e963f5b74b1683414fbee2"
+    },
+    {
+      "path": "src/Controllers/SessionController.php",
+      "sha256": "06506dd9b6c0489161adce1eac448fde6478731085ef6f342a20e56035724f40"
+    },
+    {
+      "path": "src/Exceptions/ForbiddenOperationException.php",
+      "sha256": "229c469198a09acef675d6022f3d331de71ffdb769ec425c7b712fe586bac344"
+    },
+    {
+      "path": "src/Exceptions/IllegalArgumentException.php",
+      "sha256": "6a9dd6e99e8ef62741f5ee79def8deaaeb343fcf0adc7bd9dc71997d25694db9"
+    },
+    {
+      "path": "src/Exceptions/NotFoundException.php",
+      "sha256": "0cf0316e7b736ae4effa8c257492bff00bc7944c315712524d8ef689881709ae"
+    },
+    {
+      "path": "src/Exceptions/UnauthorizedException.php",
+      "sha256": "6c9c531fa06edeba4aa4b62d826de3369f281b8a7a5cc43a0b68b3d7e3c9e877"
+    },
+    {
+      "path": "src/Exceptions/YggdrasilException.php",
+      "sha256": "bd7b579e57da53ab508a211da5508d125c6e22842f02b79bb0b10f51e968f974"
+    },
+    {
+      "path": "src/Middleware/AddApiIndicationHeader.php",
+      "sha256": "cdfad6b2927849d4af0e6ca46793f026f422143535771ef1e350545632a31058"
+    },
+    {
+      "path": "src/Middleware/CheckBearerToken.php",
+      "sha256": "b8684ec79c7b9e358e990818ce5dc450e9eeb466231887b4ff0791a2ec9cb80e"
+    },
+    {
+      "path": "src/Middleware/CheckContentType.php",
+      "sha256": "cc178cf8b658c1c4c265e6e47eb343a086f852c335d8082bc0377f4608cd044d"
+    },
+    {
+      "path": "src/Middleware/Throttle.php",
+      "sha256": "e0e5d873f1f3b592c50ef0b3de1dc0f7dd88e59adb8dc7acd6c0d8eccb13892b"
+    },
+    {
+      "path": "src/Models/Profile.php",
+      "sha256": "f3ffbf2d1fb6c05b3e0cac95044186b3d9bd1716fc4cb991a146e39ff76414fb"
+    },
+    {
+      "path": "src/Models/Token.php",
+      "sha256": "59ba61588633a0bf9dc03c4f8cc6e6d2ed509eed894073d19cff58de0f3d2853"
+    },
+    {
+      "path": "src/Utils/Http.php",
+      "sha256": "131b9c4e4ec4df61b0efbecfd111e6b6e728d223aa9c9ce0bac275f207545326"
+    },
+    {
+      "path": "src/Utils/helpers.php",
+      "sha256": "66583fd3be9487ee58d8e4f38f5a1b60c6f1cef90c3f0af5b5c7561b1a4f4bc3"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "82ff8699e23c00e28998fa546adc4f4d18ba00105cd45de64815829a4d79aeb1"
+    }
+  ]
+}

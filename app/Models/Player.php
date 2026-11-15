@@ -4,11 +4,11 @@ namespace App\Models;
 
 use App\Events\PlayerProfileUpdated;
 use App\Models;
+use App\Models\Concerns\SearchString;
 use DateTimeInterface;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
-use Lorisleiva\LaravelSearchString\Concerns\SearchString;
 
 /**
  * @property int     $pid
@@ -49,8 +49,8 @@ class Player extends Model
 
     protected $searchStringColumns = [
         'pid', 'uid',
-        'tid_skin' => '/^(?:tid_)?skin$/',
-        'tid_cape' => '/^(?:tid_)?cape$/',
+        'tid_skin' => ['alias' => ['skin']],
+        'tid_cape' => ['alias' => ['cape']],
         'name' => ['searchable' => true],
         'last_modified' => ['date' => true],
     ];
