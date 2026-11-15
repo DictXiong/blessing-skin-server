@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "63ea16363a52688c70cc287e9de32f37",
+    "content-hash": "4f0656c29ec37b2f5dd94d481b58ad9b",
     "packages": [
         {
             "name": "blessing/filter",
@@ -12490,7 +12490,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "~8.3.0",
+        "php": ">=8.3.36 <8.4",
         "ext-ctype": "*",
         "ext-gd": "*",
         "ext-json": "*",

@@ -7,6 +7,7 @@ It has not been reviewed line by line by a human.
 
 This unofficial fork adapts Blessing Skin Server **6.0.2** to PHP **8.3.36**.
 Upstream commit: `b737a65f5f5fce1f897f8603db74fd970437b351`.
+The minimum accepted runtime is PHP 8.3.36; earlier PHP 8.3 patch releases are rejected.
 It is a compatibility prerelease. It does not imply endorsement by Blessing Skin's maintainers.
 
 ## Changes

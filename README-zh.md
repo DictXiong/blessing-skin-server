@@ -42,7 +42,7 @@ Blessing Skin 是一个开源的 PHP 项目，这意味着您可以自由地在�
 Blessing Skin 对您的服务器有一定的要求。在大多数情况下，下列所需的 PHP 扩展已经开启。
 
 - 一台支持 URL 重写的主机，Nginx 或 Apache
-- PHP >= 8.0.2
+- PHP >= 8.3.36, < 8.4
 - 安装并启用如下 PHP 扩展：
   - OpenSSL
   - PDO
